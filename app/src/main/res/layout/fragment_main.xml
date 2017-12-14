@@ -6,7 +6,8 @@
 
     <!--Content-->
     <LinearLayout
-        android:background="#82ffffff"
+
+        android:background="@color/my_white"
         android:padding="@dimen/padding"
         android:orientation="vertical"
         android:layout_margin="@dimen/margin"
@@ -60,6 +61,7 @@
 
             </LinearLayout>
         <!--Password-->
+
         <LinearLayout
 
             android:orientation="horizontal"
@@ -93,6 +95,8 @@
 
         <!--New register-->
             <TextView
+                android:clickable="true"
+                android:id="@+id/txtNewRegister"
                 android:layout_marginTop="@dimen/margin2"
                 android:textStyle="italic"
                 android:textColor="@color/colorAccent"
@@ -101,7 +105,6 @@
                 android:textSize="@dimen/h2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-
 
     </LinearLayout>
 
