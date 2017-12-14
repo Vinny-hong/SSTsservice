@@ -44,6 +44,7 @@ public class RegisterFlagment extends Fragment{
                 getActivity().getSupportFragmentManager()
                         .popBackStack();
 
+
             }
         });
     }
