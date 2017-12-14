@@ -22,6 +22,12 @@ public class MainFragment extends Fragment{
         super.onActivityCreated(savedInstanceState);
 
         // Register Controller
+        registerController();
+
+
+    }
+
+    private void registerController() {
         TextView textView = getView().findViewById(R.id.txtNewRegister);
         textView.setOnClickListener(new View.OnClickListener() {
 
@@ -37,7 +43,6 @@ public class MainFragment extends Fragment{
 
             } // onClick
         });
-
     }
     // main method
 
