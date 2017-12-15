@@ -1,5 +1,6 @@
 package sahatara.com.sstservice.fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -63,8 +64,9 @@ public class RegisterFlagment extends Fragment {
     private void saveController() {
 //      //  initial edit text
         EditText nameEditText = getView().findViewById(R.id.edtName);
-        EditText userEditText = getView().findViewById(R.id.edtUser);
-        EditText passwordEditText = getView().findViewById(R.id.edtPassword);
+        EditText userEditText = getView().findViewById((R.id.edtUser));
+
+        EditText passwordEditText = getView().findViewById((R.id.edtPassword));
 
         nameString = nameEditText.getText().toString().trim();
         userString = userEditText.getText().toString().trim();

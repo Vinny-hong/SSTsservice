@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="sahatara.com.sstservice.MainActivity">
+
     <!--WallPaper-->
     <ImageView
         android:scaleType="centerCrop"
         android:src="@drawable/bg6"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
 
 
    <!--Content of Fragment-->

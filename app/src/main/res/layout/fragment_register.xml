@@ -22,14 +22,12 @@
 
     <!--Name-->
     <LinearLayout
-
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <!--Icon-->
         <ImageView
-
             android:layout_gravity="center_vertical"
             android:src="@drawable/ic_action_name"
             android:layout_width="wrap_content"
@@ -48,7 +46,8 @@
 
     <!--User-->
     <LinearLayout
-        android:id="@+id/edtUser"
+
+
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -63,7 +62,7 @@
 
         <!--TextField-->
         <EditText
-
+            android:id="@+id/edtUser"
             android:textColor="@color/colorPrimaryDark"
             android:inputType="text"
             android:hint="@string/user"
@@ -74,7 +73,7 @@
 
     <!--Password-->
     <LinearLayout
-        android:id="@+id/edtPassword"
+
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -90,6 +89,7 @@
         <!--TextField-->
         <EditText
 
+            android:id="@+id/edtPassword"
             android:textColor="@color/colorPrimaryDark"
             android:inputType="text"
             android:hint="@string/pass"
@@ -101,6 +101,11 @@
 
 </LinearLayout>
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 
 </LinearLayout>
