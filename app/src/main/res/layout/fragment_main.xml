@@ -54,7 +54,7 @@
 
             <!--TextField-->
             <EditText
-
+                android:id="@+id/edtUser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/user"
@@ -80,6 +80,8 @@
 
             <!--TextField-->
             <EditText
+
+                android:id="@+id/edtPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/pass"
@@ -91,9 +93,11 @@
         <!--Login-->
         <Button
 
+            android:id="@+id/btnLogin"
+            android:text="@string/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/login" />
+       />
 
         <!--New register-->
         <TextView
@@ -104,7 +108,7 @@
             android:layout_marginTop="@dimen/margin2"
             android:clickable="true"
             android:text="@string/register"
-            android:textColor="?android:attr/statusBarColor"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="@dimen/h2"
             android:textStyle="bold|italic" />
 
