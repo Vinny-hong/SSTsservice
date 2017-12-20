@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import sahatara.com.sstservice.MainActivity;
 import sahatara.com.sstservice.R;
@@ -91,7 +92,16 @@ public class RegisterFlagment extends Fragment {
                 postUserToServer.execute(nameString,userString,passwordString,
                         myConstant.getUrlPostUserString());  // use object
                 String resultString = postUserToServer.get();
+              //  Log.d(tag,"Result ")
 
+                if (Boolean.parseBoolean(resultString)) {
+                    getActivity().getSupportFragmentManager().popBackStack();
+                    Toast.makeText(getActivity(),"Upload New user Success",
+                            Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getActivity(),"Upload New user Non Success",
+                            Toast.LENGTH_SHORT).show();
+                }
 
 
             }catch (Exception e){
