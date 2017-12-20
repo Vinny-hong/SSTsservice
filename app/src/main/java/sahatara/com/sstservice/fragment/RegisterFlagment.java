@@ -16,6 +16,8 @@ import android.widget.EditText;
 import sahatara.com.sstservice.MainActivity;
 import sahatara.com.sstservice.R;
 import sahatara.com.sstservice.utility.MyAlertDialog;
+import sahatara.com.sstservice.utility.MyConstant;
+import sahatara.com.sstservice.utility.PostUserToServer;
 
 /**
  * Created by SST on 15/12/2560.
@@ -80,9 +82,24 @@ public class RegisterFlagment extends Fragment {
                     getString(R.string.message_have_space));
 
         } else {
-            // has data
+            //  no space
 
-        }
+            try {
+                MyConstant myConstant = new MyConstant();
+                String tag = "20DecV1";
+                PostUserToServer postUserToServer = new PostUserToServer(getActivity());  // create class
+                postUserToServer.execute(nameString,userString,passwordString,
+                        myConstant.getUrlPostUserString());  // use object
+                String resultString = postUserToServer.get();
+
+
+
+            }catch (Exception e){
+               e.printStackTrace();
+
+            }
+
+        }   //if
 
     }  // save controller
 
