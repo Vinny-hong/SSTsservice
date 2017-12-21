@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import org.json.JSONArray;
@@ -70,14 +71,14 @@ public class MenuFoodFragment extends Fragment {
 
             JSONArray jsonArray = new JSONArray(jsonString);
 
-            String[] idStrings = new String[jsonArray.length()];
-            String[] categoryStrings = new String[jsonArray.length()];
+            final String[] idStrings = new String[jsonArray.length()];
+            final String[] categoryStrings = new String[jsonArray.length()];
             String[] barodeStrings = new String[jsonArray.length()];
             String[] qrcodeStrings = new String[jsonArray.length()];
-            String[] nameFoodStrings = new String[jsonArray.length()];
-            String[] priceStrings = new String[jsonArray.length()];
-            String[] detailStrings = new String[jsonArray.length()];
-            String[] imagePathStrings = new String[jsonArray.length()];
+            final String[] nameFoodStrings = new String[jsonArray.length()];
+            final String[] priceStrings = new String[jsonArray.length()];
+            final String[] detailStrings = new String[jsonArray.length()];
+            final String[] imagePathStrings = new String[jsonArray.length()];
 
             for (int i = 0; i < jsonArray.length(); i += 1) {
 
@@ -97,7 +98,17 @@ public class MenuFoodFragment extends Fragment {
                     nameFoodStrings, priceStrings);
             listView.setAdapter(foodAdapter);
 
-
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.contentMainFragment,
+                            DetailFragment.detailInstance(idStrings[i], nameFoodStrings[i], categoryStrings[i],imagePathStrings[i],
+                                    priceStrings[i],
+                                    detailStrings[i]))
+                            .addToBackStack(null).
+                            commit();
+                }
+            });
 
 
         } catch (Exception e) {

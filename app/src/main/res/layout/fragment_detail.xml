@@ -43,7 +43,7 @@
 
             <!--Price-->
             <TextView
-                android:id="@+id/txtDetail"
+                android:id="@+id/txtPrice1"
                 android:textColor="@color/colorDetailBlue"
                 android:textStyle="bold"
                 android:textSize="@dimen/h2"
@@ -53,7 +53,7 @@
 
             <!--Detail-->
             <TextView
-                android:id="@+id/txtCategory"
+                android:id="@+id/txtDetail1"
                 android:textColor="@color/colorDetailBlue"
                 android:textStyle="bold"
                 android:textSize="@dimen/h1"
