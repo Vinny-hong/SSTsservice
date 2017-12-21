@@ -10,7 +10,7 @@
         android:layout_width="@dimen/icon"
         android:layout_height="@dimen/icon"
         android:layout_margin="15dp"
-        android:scaleType="centerInside" />
+        android:scaleType="centerCrop" />
 
     <!--Content-->
     <RelativeLayout
@@ -41,8 +41,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:text="123 THB."
-                android:textColor="@color/colorPrimary"
-                android:textSize="36sp"
+                android:textColor="@color/colorDetailBlue"
+                android:textSize="30sp"
                 android:textStyle="italic" />
         </RelativeLayout>
 

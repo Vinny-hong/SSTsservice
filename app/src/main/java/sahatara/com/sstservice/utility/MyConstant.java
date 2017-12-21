@@ -18,13 +18,21 @@ public class MyConstant {
     //    About array
     private String[] userColumnStrings = new String[]{"id", "Name", "User", "Password"};
 
+    private String[] foodColumnStrings = new String[]{
+            "id", "Category", "BarCode", "QRcode", "NameFood", "Price", "Detail", "ImagePath"     };
+
+
+    public String[] getFoodColumnStrings() {
+        return foodColumnStrings;
+    }
+
+
+
     // alt + ins  create  getter
     public String getUrlGetFoodString() {
         return urlGetFoodString;
 
     }
-
-
 
 
     //  alt - insert

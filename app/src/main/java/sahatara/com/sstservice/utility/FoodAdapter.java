@@ -59,7 +59,7 @@ public class FoodAdapter   extends BaseAdapter {
 
         // show view
         nameFoodTextView.setText(nameFoodStrings[i]);
-        priceFoodTextView.setText(priceFoodStrings[1]+ " THB.");
+        priceFoodTextView.setText(priceFoodStrings[i]+ " THB.");
 
         Picasso.with(context).load(iconStrings[i]).into(imageView);
 
