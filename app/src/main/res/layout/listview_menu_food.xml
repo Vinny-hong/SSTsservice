@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <!--Icon-->
+    <ImageView
+        android:id="@+id/imvIcon"
+        android:layout_width="@dimen/icon"
+        android:layout_height="@dimen/icon"
+        android:layout_margin="15dp"
+        android:scaleType="centerInside" />
+
+    <!--Content-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:padding="15dp">
+
+        <!--Name Food-->
+        <TextView
+            android:id="@+id/txtNameFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name Food"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/h1"
+            android:textStyle="bold" />
+
+        <!--Price Food-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/txtPriceFood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="123 THB."
+                android:textColor="@color/colorPrimary"
+                android:textSize="36sp"
+                android:textStyle="italic" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+

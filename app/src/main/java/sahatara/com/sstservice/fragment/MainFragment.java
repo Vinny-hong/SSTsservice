@@ -89,19 +89,24 @@ public class MainFragment extends Fragment{
 
                             }   // if
                         } // for
-
+                        //  check user , password by status
                         if (status) {
                             // user false
                             myAlertDialog.normalDialog("User False",
                                     "No has user in database.");
                         } else if(passwordString.equals(loginString[3])){
-                            // user found pass true
+                            // user found password true
                             Toast.makeText(getActivity(),"Welcome"+loginString[1],Toast.LENGTH_SHORT).show();
+                          // Replace and put data to menuFoodFlagment
+                            getActivity().getSupportFragmentManager().beginTransaction()
+                                    .replace(R.id.contentMainFragment, MenuFoodFragment.menuFoodInstance(loginString))
+                                    .commit();
+
 
                         } else  {
-                                                        // password false
+                            // password false
                             myAlertDialog.normalDialog("Password False",
-                                    "Try Again  Password false.");
+                                    "Try Again Password false.");
                         }
 
 

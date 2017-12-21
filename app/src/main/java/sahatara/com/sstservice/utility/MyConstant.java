@@ -11,8 +11,21 @@ public class MyConstant {
 
     private String urlGetUserString = "http://androidthai.in.th/sst/getAllDataVinny.php";
 
+    private String urlGetFoodString = "http://androidthai.in.th/sst/getAllFoodVinny.php";
+
+
+
     //    About array
     private String[] userColumnStrings = new String[]{"id", "Name", "User", "Password"};
+
+    // alt + ins  create  getter
+    public String getUrlGetFoodString() {
+        return urlGetFoodString;
+
+    }
+
+
+
 
     //  alt - insert
 
